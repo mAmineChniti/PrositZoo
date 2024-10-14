@@ -72,7 +72,7 @@ public class Zoo {
     public int searchAnimal(Animal animal) {
         int index = -1;
         for (int i = 0; i < nbrAnimals; i++) {
-            if (Objects.equals(animal.name, animals[i].name))
+            if (Objects.equals(animal.getName(), animals[i].getName()))
                 return i;
         }
         return index;

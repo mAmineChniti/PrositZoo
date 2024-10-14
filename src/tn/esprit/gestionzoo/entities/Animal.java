@@ -1,15 +1,13 @@
 package tn.esprit.gestionzoo.entities;
 
 public class Animal {
-
-    public String family;
-    public String name;
-    public boolean isMammal;
+    private String family;
+    private String name;
+    private boolean isMammal;
     private int age;
 
-
     public Animal() {
-        // TODO
+        // Constructeur par défaut
     }
 
     public Animal(String family, String name, int age, boolean isMammal) {
@@ -17,6 +15,30 @@ public class Animal {
         this.name = name;
         setAge(age);
         this.isMammal = isMammal;
+    }
+
+    public String getFamily() {
+        return family;
+    }
+
+    public void setFamily(String family) {
+        this.family = family;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public boolean isMammal() {
+        return isMammal;
+    }
+
+    public void setMammal(boolean mammal) {
+        isMammal = mammal;
     }
 
     public int getAge() {
@@ -31,10 +53,10 @@ public class Animal {
 
     @Override
     public String toString() {
-        return "tn.esprit.gestionzoo.entities.Animal{" +
+        return "Animal{" +
                 "family='" + family + '\'' +
                 ", name='" + name + '\'' +
-                ", age=" + getAge() +
+                ", age=" + age +
                 ", isMammal=" + isMammal +
                 '}';
     }
